@@ -5,7 +5,16 @@ logs/
 wandb/
 *.egg-info/
 outputs/
+/out/
 /data/
+# The exported MuJoCo assets of the deployment verification (scene XML,
+# meshes, one npz per clip): binary artefacts that live in the seed store and
+# are linked into the worktree (repro/lib/seed_store.sh).
+/assets/
+# The sim2sim replay artefacts of the deployment verification (one summary
+# json + one mp4 per clip): binary artefacts that live in the seed store and
+# are linked into the worktree (repro/lib/seed_store.sh).
+/runs/
 .superpowers/
 videos/
 MUJOCO_LOG.TXT
